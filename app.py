@@ -7,7 +7,7 @@ import random
 
 # --- Configuration ---
 # Get API key from environment variable (set in Render dashboard)
-GOLD_API_KEY = os.environ.get('GOLD_API_KEY', 'goldapi-91a719mgrb30ey-io')
+GOLD_API_KEY = os.environ.get('GOLD_API_KEY', 'goldapi-1zke8smgrdbnvq-io')
 GOLD_API_URL = "https://www.goldapi.io/api/{symbol}/{currency}"
 
 app = Flask(__name__)
@@ -150,4 +150,5 @@ if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     # Use debug=False in production
     debug_mode = os.environ.get('FLASK_ENV') == 'development'
+
     app.run(host='0.0.0.0', port=port, debug=debug_mode)
